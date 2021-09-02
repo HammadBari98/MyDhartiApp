@@ -20,13 +20,14 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_auth/Screens/Welcome/welcome_screen.dart';
 // import 'package:flutter_auth/constants.dart';
 // import 'package:firebase_core/firebase_core.dart';
-import 'package:home_screen/home.dart';
+// import 'package:home_screen/home.dart';
 import 'package:home_screen/landing_screen.dart';
 
-import 'package:home_screen/map.dart';
-import 'package:home_screen/precinct_list.dart';
-import 'package:home_screen/properties.dart';
-import 'package:home_screen/select_city.dart';
+// import 'package:home_screen/map.dart';
+// import 'package:home_screen/precinct_list.dart';
+// import 'package:home_screen/profile_screen.dart';
+// import 'package:home_screen/properties.dart';
+// import 'package:home_screen/select_city.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

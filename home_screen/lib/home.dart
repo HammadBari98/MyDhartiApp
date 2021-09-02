@@ -10,6 +10,8 @@ import 'package:home_screen/properties.dart';
 import 'package:home_screen/property_detail_screen.dart';
 import 'package:home_screen/map.dart';
 
+import 'my_property.dart';
+
 class Home extends StatefulWidget {
   // const Home({Key? key}) : super(key: key);
 
@@ -29,10 +31,44 @@ class _HomeState extends State<Home> {
       child: Text("Settting"),
     ),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          actions: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: DropdownButton<String>(
+                dropdownColor: Colors.white,
+                underline: SizedBox(),
+                icon: Icon(
+                  Icons.language,
+                  color: Colors.white,
+                ),
+                items: <String>[
+                  '🇺🇸 English',
+                  '🇵🇰 اُردُو‎',
+                ].map((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: new Text(value),
+                  );
+                }).toList(),
+                onChanged: (_) {},
+              ),
+            ),
+            Padding(
+                padding: EdgeInsets.only(right: 20.0),
+                child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Profile_Screen()));
+                    },
+                    child: Icon(Icons.person))),
+          ],
           backgroundColor: Colors.yellow.shade900,
           title: Text(
             "Home Page",
@@ -171,7 +207,7 @@ class _HomeState extends State<Home> {
                           leading: Icon(Icons.file_present,
                               color: Colors.yellow.shade900),
                           title: Text(
-                            "Properties",
+                            "My Properties",
                             style: TextStyle(
                                 color: Colors.yellow.shade900, fontSize: 16),
                           ),
@@ -180,7 +216,7 @@ class _HomeState extends State<Home> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return Properties();
+                                  return My_Property_Screen();
                                 },
                               ),
                             );
@@ -203,6 +239,15 @@ class _HomeState extends State<Home> {
                               ),
                             );
                           }),
+                      ListTile(
+                          leading: Icon(Icons.favorite,
+                              color: Colors.yellow.shade900),
+                          title: Text(
+                            "Favorite ",
+                            style: TextStyle(
+                                color: Colors.yellow.shade900, fontSize: 16),
+                          ),
+                          onTap: () {}),
                       ListTile(
                           leading:
                               Icon(Icons.logout, color: Colors.yellow.shade900),
@@ -288,7 +333,7 @@ class _HomeState extends State<Home> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Precinct_List()));
+                                        builder: (context) => Properties()));
                               },
                               child: Container(
                                 height: 50,
@@ -309,10 +354,13 @@ class _HomeState extends State<Home> {
                                       width: 165,
                                       padding: EdgeInsets.symmetric(
                                           vertical: 12.0, horizontal: 10.0),
-                                      child: Text(
-                                        "Bahria Town Karachi",
-                                        style: TextStyle(
-                                            fontSize: 15, color: Colors.white),
+                                      child: Center(
+                                        child: Text(
+                                          "Societies",
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white),
+                                        ),
                                       ),
                                       decoration: BoxDecoration(
                                         color: Colors.yellow.shade900,
@@ -345,7 +393,7 @@ class _HomeState extends State<Home> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Precinct_List()));
+                                        builder: (context) => Properties()));
                               },
                               child: Container(
                                 height: 50,
@@ -366,10 +414,13 @@ class _HomeState extends State<Home> {
                                       width: 165,
                                       padding: EdgeInsets.symmetric(
                                           vertical: 12.0, horizontal: 20.0),
-                                      child: Text(
-                                        "DHA Karachi",
-                                        style: TextStyle(
-                                            fontSize: 15, color: Colors.white),
+                                      child: Center(
+                                        child: Text(
+                                          "Classifieds",
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white),
+                                        ),
                                       ),
                                       decoration: BoxDecoration(
                                         color: Colors.yellow.shade900,
@@ -402,7 +453,7 @@ class _HomeState extends State<Home> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Precinct_List()));
+                                        builder: (context) => Properties()));
                               },
                               child: Container(
                                 height: 50,
@@ -423,10 +474,13 @@ class _HomeState extends State<Home> {
                                       width: 165,
                                       padding: EdgeInsets.symmetric(
                                           vertical: 12.0, horizontal: 20.0),
-                                      child: Text(
-                                        "Scheme 33",
-                                        style: TextStyle(
-                                            fontSize: 15, color: Colors.white),
+                                      child: Center(
+                                        child: Text(
+                                          "Buildings",
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white),
+                                        ),
                                       ),
                                       decoration: BoxDecoration(
                                         color: Colors.yellow.shade900,

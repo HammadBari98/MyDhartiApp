@@ -60,7 +60,7 @@ class MyHomePage extends StatelessWidget {
                         },
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20.0),
-                          child: Image.asset('assets/imgs/package.png',
+                          child: Image.asset('assets/imgs/FreePackage.png',
                               width: 110.0, height: 110.0),
                         ),
                       ),
@@ -94,7 +94,7 @@ class MyHomePage extends StatelessWidget {
                         },
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20.0),
-                          child: Image.asset('assets/imgs/package.png',
+                          child: Image.asset('assets/imgs/StandardPackage.png',
                               width: 110.0, height: 110.0),
                         ),
                       ),
@@ -128,7 +128,7 @@ class MyHomePage extends StatelessWidget {
                         },
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20.0),
-                          child: Image.asset('assets/imgs/package.png',
+                          child: Image.asset('assets/imgs/PremiumPackage.png',
                               width: 110.0, height: 110.0),
                         ),
                       ),
@@ -162,7 +162,7 @@ class MyHomePage extends StatelessWidget {
                         },
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20.0),
-                          child: Image.asset('assets/imgs/package.png',
+                          child: Image.asset('assets/imgs/GoldPackage.png',
                               width: 110.0, height: 110.0),
                         ),
                       ),

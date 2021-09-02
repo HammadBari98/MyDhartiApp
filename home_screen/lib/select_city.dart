@@ -23,7 +23,7 @@ class _Select_CityState extends State<Select_City> {
             height: 250,
             child: Image(
               image: AssetImage(
-                'assets/imgs/selectCity.jpg',
+                'assets/imgs/CityBG.jpeg',
               ),
               fit: BoxFit.fill,
             ),
